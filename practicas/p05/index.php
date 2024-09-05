@@ -76,4 +76,9 @@
     echo '$d: ';var_export($d); echo '<br>';
     echo '$e: ';var_export($e); echo '<br>';
     echo '$f: ';var_export($f); echo '<br>';
+
+    echo '<br>';
+    echo "Versión de Apache y PHP: " . $_SERVER['SERVER_SOFTWARE'] .'<br>';
+    echo "Nombre del sistema operativo: " . $_SERVER['HTTP_USER_AGENT'] . "<br>";
+    echo "Idioma: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
 ?>
