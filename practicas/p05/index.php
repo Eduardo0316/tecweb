@@ -52,4 +52,11 @@
         print_r ($z); echo '<br>';
     }
     cambio();
+
+    echo '<br>';
+    $a = "7 personas";
+    $b = (integer) $a;
+    $a = "9E3";
+    $c = (double) $a;
+
 ?>
