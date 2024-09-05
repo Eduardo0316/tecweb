@@ -59,4 +59,21 @@
     $a = "9E3";
     $c = (double) $a;
 
+    var_dump($a); echo '<br>';
+    var_dump($b); echo '<br>';
+    var_dump($c); echo '<br>';
+    $a = "0";
+    $b = "TRUE";
+    $c = FALSE;
+    $d = ($a OR $b);
+    $e = ($a AND $c);
+    $f = ($a XOR $b);
+
+    echo '<br>';
+    echo '$a: ';var_export($a); echo '<br>';
+    echo '$b: ';var_export($b); echo '<br>';
+    echo '$c: ';var_export($c); echo '<br>';
+    echo '$d: ';var_export($d); echo '<br>';
+    echo '$e: ';var_export($e); echo '<br>';
+    echo '$f: ';var_export($f); echo '<br>';
 ?>
