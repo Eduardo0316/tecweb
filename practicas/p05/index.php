@@ -37,4 +37,19 @@
     echo $b.'<br>';
     $z[0] = "MySQL";
     print_r ($z); echo '<br>';
+
+    echo '<br>';
+    function cambio(){
+        global $a;
+	    $a = 'HTML5';
+        echo '$a: '.$a.'<br>';
+        global $b;
+	    $b = 'Nueva version HTML5';
+        echo '$b: '.$b.'<br>';
+        global $c;
+        echo '$c : '.$c.'<br>';
+        global $z; echo '$z: ';
+        print_r ($z); echo '<br>';
+    }
+    cambio();
 ?>
