@@ -21,4 +21,20 @@
     echo 'Tras la segunda asignación se cambian los valores de las variables 
     $a y $b, la variable $a solo cambia su valor mientra que la variable $b obtiene el 
     valor de la nueva variable $a <br>';
+
+    echo '<br>';
+    $a = "PHP5";
+    echo $a.'<br>';
+    $z[] = &$a;
+    print_r ($z); echo '<br>';
+    $b = "5a version de PHP";
+    echo $b.'<br>';
+    $c = $b*10;
+    echo $c.'<br>';
+    $a .= $b;
+    echo $a.'<br>';
+    $b *= $c;
+    echo $b.'<br>';
+    $z[0] = "MySQL";
+    print_r ($z); echo '<br>';
 ?>
