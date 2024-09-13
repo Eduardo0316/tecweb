@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P07 Identificar solicitud</title>
+</head>
+<body>
+    <form method="POST" action="src/solicitud.php">
+        <h2>Ejercicio 5</h2>
+        <fieldset>
+            <legend>Información Personal</legend>
+            <p>Edad: <input type="text" name="edad"></p>
+        </fieldset>
+        <fieldset>
+            <label for="sexo">Sexo: </label>
+            <select name="sexo" id="sexo">
+                <option value="otro">Prefiero no mencionar</option>
+                <option value="femenino">Femenino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+        </fieldset>
+        <p><input type="submit" value="Enviar">
+            <input type="reset"></p>
+    </form>
+</body>
+</html>

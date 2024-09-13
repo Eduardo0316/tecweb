@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque vehicular</title>
+</head>
+<body>
+    <form method="POST" action="src/solicitud.php"></form>
+        <h2>Ejercicio 5</h2>
+        <fieldset>
+            <legend>Parque de autos</legend>
+            <p>Matricula: <input type="text" name="edad"></p>
+        
+        <fieldset>
+            <legend>Auto</legend>
+            <ul>
+                <li>Marca: <input type="text" name="marca"></li>
+                <li>Modelo (año)<input type="text" name="modelo"></li>
+            </ul>
+            <label for="tipo">Tipo: </label>
+            <select name="tipo" id="tipo">
+                <option value="sedan">sedan</option>
+                <option value="hachback">hachback</option>
+                <option value="camioneta">camioneta</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Propietario</legend>
+            <ul>
+                <li>Nombre: <input type="nombre" name="nombre"></li>
+                <li>Ciudad: <input type="ciudad" name="ciudad"></li>
+                <li>Dirección: <input type="direccion" name="direccion"></li>
+            </ul>
+        </fieldset>
+        <p><input type="submit" value="Enviar">
+            <input type="reset"></p>
+        </fieldset>
+    </form>
+</body>
+</html>
