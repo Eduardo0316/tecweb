@@ -4,17 +4,8 @@
 
 <?php
 
-if(isset($_GET['tope']))
-{
-    $tope = $_GET['tope'];
-}
-else
-{
-    die('Parámetro "tope" no detectado...');
-}
-
-if (!empty($tope))
-	{
+/*if (!empty($tope))
+	{*/
 		/** SE CREA EL OBJETO DE CONEXION */
 		@$link = new mysqli('localhost', 'root', 'mendoza21:)', 'marketzone');
         /** NOTA: con @ se suprime el Warning para gestionar el error por medio de código */
@@ -27,7 +18,7 @@ if (!empty($tope))
 		}
 
 		/** Crear una tabla que no devuelve un conjunto de resultados */
-		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") ) 
+		if ( $result = $link->query("SELECT * FROM productos WHERE eliminado = 0") ) 
 		{
             /** Se extraen las tuplas obtenidas de la consulta */
 			$row = $result->fetch_all(MYSQLI_ASSOC);
@@ -46,7 +37,7 @@ if (!empty($tope))
 		$link->close();
 
         /** Se devuelven los datos en formato JSON */
-	}
+	//}
 ?>
 
 <head>
