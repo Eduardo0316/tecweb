@@ -176,25 +176,120 @@ function ej12(){
 }
 //Ejercicio 13
 function ej13(){
-    
+    var valor;
+    var div = document.getElementById('ej13');
+    do{
+    valor = prompt('Ingresa un valor entre 0 y 999:', '');
+    valor = parseInt(valor);
+    div.innerHTML=div.innerHTML+'El valor '+valor+' tiene ';
+    if (valor<10)
+        div.innerHTML=div.innerHTML+'Tiene 1 dígitos';
+    else
+    if (valor<100) {
+        div.innerHTML=div.innerHTML+'Tiene 2 dígitos';
+    }
+    else {
+        div.innerHTML=div.innerHTML+'Tiene 3 dígitos';
+    }
+    div.innerHTML=div.innerHTML+'<br>';       
+    }while(valor!=0);
 }
 //Ejercicio 14
 function ej14(){
-    
+    var f;
+    var div = document.getElementById('ej14');
+    for(f=1; f<=10; f++)
+    {
+        div.innerHTML=div.innerHTML+f+" ";
+    }
 }
 //Ejercicio 15
 function ej15(){
-    
+    var div = document.getElementById('ej15');
+    div.innerHTML="Cuidado<br>";
+    div.innerHTML=div.innerHTML+"Ingresa tu documento correctamente<br>";
+    div.innerHTML=div.innerHTML+"Cuidado<br>";
+    div.innerHTML=div.innerHTML+"Ingresa tu documento correctamente<br>";
+    div.innerHTML=div.innerHTML+"Cuidado<br>";
+    div.innerHTML=div.innerHTML+"Ingresa tu documento correctamente<br>";
 }
 //Ejercicio 16
-function ej16(){
-    
+function mostrarMensaje() {
+    var div = document.getElementById('ej16');
+    div.innerHTML=div.innerHTML+"Cuidado<br>";
+    div.innerHTML=div.innerHTML+"Ingresa tu documento correctamente<br>";
 }
-//Ejercicio 17
-function ej17(){
+function ej16(){
+    mostrarMensaje();
+    mostrarMensaje();
+    mostrarMensaje();
+}
     
+//Ejercicio 17
+function mostrarRango(x1,x2) {
+    var inicio;
+    var div = document.getElementById('ej17');
+    div.innerHTML=' ';
+    for(inicio=x1; inicio<=x2; inicio++) {
+        div.innerHTML=div.innerHTML+inicio+' ';
+    }
+}
+function ej17(){
+    var valor1,valor2;
+    valor1 = prompt('Ingresa el valor inferior:', '');
+    valor1 = parseInt(valor1);
+    valor2 = prompt('Ingresa el valor superior:', '');
+    valor2 = parseInt(valor2);
+    mostrarRango(valor1,valor2);
 }
 //Ejercicio 18
-function ej18(){
+function convertirCastellano(x) {
+    if(x==1)
+    return "uno";
+    else
+    if(x==2)
     
+    return "dos";
+    else
+    if(x==3)
+    return "tres";
+    else
+    if(x==4)
+    
+    return "cuatro";
+    
+    else
+    
+    if(x==5)
+    return "cinco";
+    else
+    return "valor incorrecto";
+    
+}
+    
+function ej18(){
+    var valor = prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+    var r = convertirCastellano(valor);
+    var div = document.getElementById('ej18');
+    div.innerHTML=r;
+}
+//Ejercicio 19
+function convertirCastellano(x) {
+    switch (x) {
+    case 1: return "uno";
+    case 2: return "dos";
+    case 3: return "tres";
+    case 4: return "cuatro";
+    case 5: return "cinco";
+    default: return "valor incorrecto";
+    }
+}
+//Ejercicio 19
+function ej19(){
+    var valor = prompt("Ingresa un valor entre 1 y 5", "");
+    valor = parseInt(valor);
+    var r = convertirCastellano(valor);
+    var div = document.getElementById('ej19');
+    div.innerHTML=r;
 }
