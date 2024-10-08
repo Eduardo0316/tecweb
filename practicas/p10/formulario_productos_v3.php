@@ -7,15 +7,16 @@
     <body>
         <form 
         id="formulario"
-        action="http://localhost/tecweb/practicas/p10/set_producto_v2.php"
+        action="http://localhost/tecweb/practicas/p10/update_producto.php"
         method="post"> 
         <h2>Registro de productos</h2>
         <fieldset>
             <legend>Ingresa los datos de tu producto</legend>
             <ul>
-                <li><label>Nombre del producto:</label> <input name="nombre" type="text" id="nombre" ></li>
+            <li><label for="form-id">Id:</label><input type="text" name="id" id="id" value="<?= $_GET['id'] ?>" readonly></li>
+            <li><label for="form-nombre">Nombre del producto:</label> <input type="text" name="nombre" id="form-nombre" value="<?= $_GET['nombre'] ?>" required></li>
                 <li>
-                    <label for="marca">Marca del producto:</label>
+                    <label for="marca" value="<?= $_GET['marca'] ?>">Marca del producto:</label>
                     <select name="marca" id="marca">
                         <option value="Sanrio">Sanrio</option>
                         <option value="Peanuts">Peanuts</option>
@@ -25,11 +26,11 @@
                         <option value="Angry Birds">Angry Birds</option>
                     </select>
                 </li>
-                <li><label for="form-modelo">Modelo del producto:</label> <input name="modelo" type="text" id="modelo"></li>
-                <li><label for="form-precio">Precio del producto: </label><input name="precio" type="number" id="precio" placeholder="1.0" step="1" min="0" max="1000"/></li>
-                <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles" rows="3" cols="40" id="detalles" placeholder="Descripción general del producto"></textarea></li>
-                <li><label for="form-unidades">Unidades a registrar:</label><input name="unidades" type="number" id="unidades" min="1" max="1000"/></li>
-                <li><label for="form-imagen">Imagen del producto:</label> <input name="imagen" type="text" id="imagen"></li>
+                <li><label for="form-modelo">Modelo del producto:</label> <input type="text" name="modelo" id="form-modelo" value="<?= $_GET['modelo'] ?>" required></li>
+                <li><label for="form-precio">Precio del producto: </label><input type="number" name="precio" value="<?= $_GET['precio'] ?>" placeholder="1.0" step="1" min="0" max="1000" required/></li>
+                <li><label for="form-detalles">Detalles:</label><br><input type="text" name="detalles" id="form-detalles" value="<?= $_GET['detalles'] ?>"></li>
+                <li><label for="form-unidades">Unidades a registrar:</label><input type="number" id="form-unidades" value="<?= $_GET['unidades'] ?>" name="unidades" min="1" max="1000" required/></li>
+                <li><label for="form-imagen">Imagen:</label><input type="text" name="imagen" id="form-imagen" value="<?= $_GET['imagen'] ?>"></li>
             </ul>
         </fieldset>
         <div id="div1"></div>

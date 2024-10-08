@@ -84,8 +84,8 @@
             <th scope="col">Marca</th>
             <th scope="col">Modelo</th>
             <th scope="col">Precio</th>
-            <th scope="col">Unidades</th>
             <th scope="col">Detalles</th>
+            <th scope="col">Unidades</th>
             <th scope="col">Imagen</th>
             <th scope="col">Submit</th> 
             </tr>
@@ -98,8 +98,8 @@
             <td class="row-data"><?= $row['marca'] ?></td>
             <td class="row-data"><?= $row['modelo'] ?></td>
             <td class="row-data"><?= $row['precio'] ?></td>
-            <td class="row-data"><?= $row['unidades'] ?></td>
             <td class="row-data"><?= utf8_encode($row['detalles']) ?></td>
+            <td class="row-data"><?= $row['unidades'] ?></td>
             <td class="row-data"><img src=<?= $row['imagen'] ?> ></td>
             <td><input type="button" value="Modificar" onclick="show()" /></td>
         </tr>
@@ -111,7 +111,7 @@
 
     <script>
         function send2form(nombre, marca, modelo, precio, detalles, unidades, imagen, id) {     //form) { 
-            var urlForm = "http://localhost/tecweb/practicas/p10/formulario_productos_v2.php";
+            var urlForm = "http://localhost/tecweb/practicas/p10/formulario_productos_v3.php";
             var propId = "id=" + id;
             var propName = "nombre=" + nombre;
             var propMarca = "marca=" + marca;

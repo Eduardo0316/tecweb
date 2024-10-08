@@ -97,8 +97,8 @@ if (!empty($tope))
             <th scope="col">Marca</th>
             <th scope="col">Modelo</th>
             <th scope="col">Precio</th>
-            <th scope="col">Unidades</th>
             <th scope="col">Detalles</th>
+            <th scope="col">Unidades</th>
             <th scope="col">Imagen</th>
             <th scope="col">Submit</th> 
             </tr>
@@ -111,8 +111,8 @@ if (!empty($tope))
             <td class="row-data"><?= $row['marca'] ?></td>
             <td class="row-data"><?= $row['modelo'] ?></td>
             <td class="row-data"><?= $row['precio'] ?></td>
-            <td class="row-data"><?= $row['unidades'] ?></td>
             <td class="row-data"><?= $row['detalles'] ?></td>
+            <td class="row-data"><?= $row['unidades'] ?></td>
             <td class="row-data" ><img src='<?= $row['imagen'] ?>' ></td>
             <td><input type="button" value="Modificar" onclick="show()" /></td>
         </tr>
