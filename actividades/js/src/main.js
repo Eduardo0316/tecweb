@@ -275,7 +275,7 @@ function ej18(){
     div.innerHTML=r;
 }
 //Ejercicio 19
-function convertirCastellano(x) {
+function convertirenCastellano(x) {
     switch (x) {
     case 1: return "uno";
     case 2: return "dos";
@@ -289,7 +289,7 @@ function convertirCastellano(x) {
 function ej19(){
     var valor = prompt("Ingresa un valor entre 1 y 5", "");
     valor = parseInt(valor);
-    var r = convertirCastellano(valor);
+    var r = convertirenCastellano(valor);
     var div = document.getElementById('ej19');
     div.innerHTML=r;
 }
