@@ -123,7 +123,7 @@ if (!empty($tope))
     <?php endif; ?>
     <script>
         function send2form(nombre, marca, modelo, precio, detalles, unidades, imagen, id) {     //form) { 
-            var urlForm = "http://localhost/tecweb/practicas/p10/formulario_productos_v2.php";
+            var urlForm = "http://localhost/tecweb/practicas/p10/formulario_productos_v3.php";
             var propId = "id=" + id;
             var propName = "nombre=" + nombre;
             var propMarca = "marca=" + marca;
