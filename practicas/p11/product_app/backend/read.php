@@ -20,9 +20,23 @@
 			$result->free();
 		} else {
             die('Query Error: '.mysqli_error($conexion));
-        }
-		$conexion->close();
+        }    
     } 
+    elseif (isset($_POST['nombre'])) {
+        // BÚSQUEDA POR NOMBRE
+        $nombre = $_POST['nombre'];
+
+        if ($result = $conexion->query("SELECT * FROM productos WHERE nombre LIKE '%$nombre%'")) {
+            while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+                $data[] = array_map('utf8_encode', $row);
+            }
+            $result->free();
+        } else {
+            die('Query Error: ' . mysqli_error($conexion));
+        }
+    } 
+
+    $conexion->close();
     
     // SE HACE LA CONVERSIÓN DE ARRAY A JSON
     echo json_encode($data, JSON_PRETTY_PRINT);
