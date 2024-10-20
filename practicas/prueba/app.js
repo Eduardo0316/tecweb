@@ -1,24 +1,29 @@
 // JSON BASE A MOSTRAR EN FORMULARIO
 $(document).ready(function(){
     console.log("jQwery is working");
+    $('#product-result').show();
 
     $('#search').keyup(function(e) {
-        let search = $('#search').val();
-        $.ajax({
-            url: 'product-search.php',
-            type: 'POST',
-            data: { search },
-            success: function(response){
-                let productos = JSON.parse(response);
-                let template = '';
-                productos.forEach(producto => {
-                    template += `<li>
-                        ${producto.nombre}
-                    </li>`
-                });
-                
-            }
-        })
+        if($('#search').val()){
+            let search = $('#search').val();
+            $.ajax({
+                url: 'product-search.php',
+                type: 'POST',
+                data: { search },
+                success: function(response){
+                    let productos = JSON.parse(response);
+                    let template = '';
+                    productos.forEach(producto => {
+                        console.log(producto);
+                        //template += `<li>
+                          //  ${producto.nombre}
+                        //</li>`
+                    });
+                    //$('#container').html(template);
+                    //$('#product-result').show();
+                }
+            })
+        }
     })
 });
 
