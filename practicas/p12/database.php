@@ -10,6 +10,7 @@
      * NOTA: si la conexión falló $conexion contendrá false
      **/
     if(!$conexion) {
+        //echo "Base de datos conectada";
         die('¡Base de datos NO conextada!');
     }
 ?>
