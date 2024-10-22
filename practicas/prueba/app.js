@@ -1,7 +1,6 @@
 // JSON BASE A MOSTRAR EN FORMULARIO
 $(document).ready(function(){
     console.log("jQwery is working");
-    $('#product-result').show();
 
     $('#search').keyup(function(e) {
         if($('#search').val()){
@@ -14,15 +13,43 @@ $(document).ready(function(){
                     let productos = JSON.parse(response);
                     let template = '';
                     productos.forEach(producto => {
-                        console.log(producto);
-                        //template += `<li>
-                          //  ${producto.nombre}
-                        //</li>`
+                        template += `<li>
+                            ${producto.nombre}
+                        </li>`
                     });
-                    //$('#container').html(template);
+                    $('#container').html(template);
+                    document.getElementById("product-result").className = "card my-4 d-block";
                     //$('#product-result').show();
                 }
-            })
+            });
+        }
+    });
+    $('#product-form').submit(function(e){
+        let productoJsonString = $('#description').val();
+        // SE CONVIERTE EL JSON DE STRING A OBJETO
+        let finalJSON = JSON.parse(productoJsonString);
+        const postData = {
+            nombre: $('#name').val(),
+            marca: finalJSON['marca'],
+            modelo: finalJSON['modelo'],
+            precio: finalJSON['precio'],
+            detalles: finalJSON['detalles'],
+            unidades: finalJSON['unidades'],
+            imagen: finalJSON['imagen']
+        };
+        $.post('product-add.php', postData, function(response){
+            console.log(response);
+            $('#product-form').trigger('reset');
+            init();
+        });
+        e.preventDefault();
+    });
+
+    $.ajax({
+        url: 'product-list.php',
+        type: 'GET',
+        succes: function(response){
+            console.log(response);
         }
     })
 });
@@ -36,7 +63,7 @@ var baseJSON = {
     "modelo": "XX-000",
     "marca": "NA",
     "detalles": "NA",
-    "imagen": "img/default.png"
+    "imagen": "img/imagen.png"
   };
 
 function init() {
