@@ -12,6 +12,7 @@ if(isset($_POST['nombre'])){
     '$marca', '$modelo', $precio, '$detalles', $unidades, '$imagen', 0)";
     $resultado = mysqli_query($conexion, $query);
     if(!$resultado){
+        echo 'Producto agregado con exito';
         die('La consulta fallo');
     }
     else{echo 'Producto agregado con exito';}

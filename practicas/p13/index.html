@@ -47,11 +47,12 @@
                             <option value="Anime">Anime</option>
                             <option value="Minecraft">Minecraft</option>
                             <option value="Angry Birds">Angry Birds</option>
+                            <option value="PopCap">PopCap</option>
                         </select>
                       </li>
                       <li><label for="form-modelo">Modelo del producto:</label> <input type="text" name="modelo_producto" id="form-modelo"></li>
                       <small class="form-estado" id="modelo-estado"></small>
-                      <li><label for="form-precio">Precio del producto: </label><input type="number" name="precio_producto" id="form-precio" placeholder="99.99" step="1" min="99.99" max="1000"/></li>
+                      <li><label for="form-precio">Precio del producto: </label><input type="number" name="precio_producto" id="form-precio" placeholder="99.99" step="0.01" min="99.99" max="1000"/></li>
                       <small class="form-estado" id="precio-estado"></small>
                       <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles_producto" rows="3" cols="34" id="form-detalles" placeholder="Descripción general del producto"></textarea></li>
                       <small class="form-estado" id="detalles-estado"></small>

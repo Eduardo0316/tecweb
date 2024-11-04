@@ -1,6 +1,8 @@
 // JSON BASE A MOSTRAR EN FORMULARIO
 $(document).ready(function(){
     let edit = false;
+    let actID;
+    let repNom = false;
     console.log("jQwery is working");
     fetchProducts();
 
@@ -21,7 +23,32 @@ $(document).ready(function(){
                     });
                     $('#container').html(template);
                     document.getElementById("product-result").className = "card my-4 d-block";
-                    //$('#product-result').show();
+                }
+            });
+        }
+    });
+
+    $('#form-nombre').keyup(function(){
+        if ($('#form-nombre').val().trim()){
+            let nombre = $('#form-nombre').val().trim();
+            $.ajax({
+                url: 'backend/product-nombre.php',
+                type: 'GET',
+                data: { nombre },
+                success: function(response){
+                    let productos = JSON.parse(response);
+                    if(!$.isEmptyObject(productos)){
+                        if((actID==productos[0].id)){
+                            repNom=false;
+                        } else {
+                            $('#nombre-estado').text('El nombre ya existe en la base de datos');
+                            repNom= true;
+                        }
+                    }
+                    else {
+                        repNom= false;
+                    }
+                    
                 }
             });
         }
@@ -30,14 +57,20 @@ $(document).ready(function(){
     $('#form-nombre').keyup(function(){valNom = validarNombre(); });
     function validarNombre(){
         let nombre = $('#form-nombre').val();
-        if (nombre.length === 0 || nombre.length > 100) {
-            $('#nombre-estado').text('El nombre es requerido y debe tener un máximo de 100 caracteres');
+        if (repNom){ 
             return false;
         }
         else{
-            $('#nombre-estado').text('Valido');
-            return true;
+            if (nombre.length === 0 || nombre.length > 100) {
+                $('#nombre-estado').text('El nombre es requerido y debe tener un máximo de 100 caracteres');
+                return false;
+            }
+            else{
+                $('#nombre-estado').text('Valido');
+                return true;
+            }
         }
+        
     }
 
     $('#form-modelo').keyup(function(){valMod = validarModelo(); });
@@ -94,13 +127,13 @@ $(document).ready(function(){
 
     $('#product-form').submit(function(e){        
         const postData = {
-            nombre: $('#form-name').val(),
+            nombre: $('#form-nombre').val(),
             marca: $('#form-marca').val(),
             modelo: $('#form-modelo').val(),
             precio: $('#form-precio').val(),
             detalles: $('#form-detalles').val(),
             unidades: $('#form-unidades').val(),
-            imagen: $('#form-imagen').val(),
+            imagen: $('#form-imagen').val()||'img/imagen.png',
             id: $('#productId').val()
         };
         
@@ -122,7 +155,7 @@ $(document).ready(function(){
         $.post(url, postData, function(response){
             fetchProducts();
             $('#product-form').trigger('reset');
-            //init();
+            init();
             alert(response);
         });
         e.preventDefault();
@@ -177,19 +210,15 @@ $(document).on('click', '.product-item', function(){
     let id = $(element).attr('productoId');
     $.post('backend/product-single.php', {id}, function(response) {
         const producto = JSON.parse(response);
-        $('#name').val(producto.nombre);
-        var finJson = {
-            precio: Number(producto.precio),
-            unidades: Number(producto.unidades),
-            modelo: producto.modelo,
-            marca: producto.marca,
-            detalles: producto.detalles,
-            imagen: producto.imagen
-        };
-        
-        $("#description").val(JSON.stringify(finJson, null, 2));
+        $('#form-nombre').val(producto.nombre);
+        $('#form-modelo').val(producto.modelo);
+        $('#form-precio').val(producto.precio);
+        $('#form-detalles').val(producto.detalles);
+        $('#form-unidades').val(producto.unidades);
+        $('#form-imagen').val(producto.imagen);
         $("#productId").val(producto.id);
         edit = true;
+        actID = $('#productId').val();
     });
   });
 
@@ -204,6 +233,6 @@ function init(){
 }
 
 function alf(texto){
-    let patron = /^[A-Xa-z0-9]+$/;
+    let patron = /^[A-Za-z0-9]+$/;
     return patron.test(texto);
 }
