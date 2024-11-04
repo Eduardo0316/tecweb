@@ -31,11 +31,36 @@
             <div class="card-body">
               <!-- FORMULARIO PARA AGREGAR PRODUCTO -->
               <form id="product-form">
+                <input type="hidden" id="productId">
                 <div class="form-group">
-                  <input class="form-control" type="text" id="name" placeholder="Nombre de producto">
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" id="description" cols="30" rows="10" placeholder="JSON de producto"></textarea>
+                  <fieldset>
+                    <legend>Ingresa los datos de tu producto</legend>
+                    <ul>
+                      <li><label for="form-nombre">Nombre del producto:</label> <input type="text" name="nombre_producto" id="form-nombre"></li>
+                      <small class="form-estado" id="nombre-estado"></small>
+                      <li>
+                        <label for="form-marca">Marca del producto:</label>
+                        <select name="marca" id="form-marca">
+                            <option value="Sanrio">Sanrio</option>
+                            <option value="Peanuts">Peanuts</option>
+                            <option value="Freddy's">Freddy's</option>
+                            <option value="Anime">Anime</option>
+                            <option value="Minecraft">Minecraft</option>
+                            <option value="Angry Birds">Angry Birds</option>
+                        </select>
+                      </li>
+                      <li><label for="form-modelo">Modelo del producto:</label> <input type="text" name="modelo_producto" id="form-modelo"></li>
+                      <small class="form-estado" id="modelo-estado"></small>
+                      <li><label for="form-precio">Precio del producto: </label><input type="number" name="precio_producto" id="form-precio" placeholder="99.99" step="1" min="99.99" max="1000"/></li>
+                      <small class="form-estado" id="precio-estado"></small>
+                      <li><label for="form-detalles">Detalles:</label><br><textarea name="detalles_producto" rows="3" cols="34" id="form-detalles" placeholder="Descripción general del producto"></textarea></li>
+                      <small class="form-estado" id="detalles-estado"></small>
+                      <li><label for="form-unidades">Unidades a registrar:</label><input type="number" id="form-unidades" name="unidades_producto" min="1" max="1000"/></li>
+                      <small class="form-estado" id="unidades-estado"></small>
+                      <li><label for="form-imagen">Imagen:</label><input type="text" name="imagen_producto" id="form-imagen"></li>
+                    </ul>
+                </fieldset>
+                  <!--<textarea class="form-control" id="description" cols="30" rows="10" placeholder="JSON de producto"></textarea>-->
                 </div>
                 <input type="hidden" id="productId">
                 <button class="btn btn-primary btn-block text-center" type="submit">
