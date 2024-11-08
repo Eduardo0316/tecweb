@@ -1,37 +1,39 @@
 <?php
-class Menu{
-    private $opciones = NULL;
+class Menu {
+    private $opciones = array();
     private $direccion;
 
-    public function __construct($dir){
-        $this->opciones = array();
+    public function __construct($dir) {
         $this->direccion = $dir;
     }
 
-    public function insertar_opcion($op){
+    // SE RELLENA ARREGLO DE OBJETOS
+    public function insertar_opcion($op) {
         $this->opciones[] = $op;
     }
-    private function graficar_horizontal(){
-        for($i=0;$i<count($this->opciones);$i++){
-            //Se invoca al metodo de objeto contenido en la posicion $i
+
+    private function graficarHorizontal() {
+        for( $i=0; $i<count($this->opciones); $i++ ) {
+            // SE INVOCA A MÉTODO DEL OBJETO CONTENIDO EN EL ARREGLO
             $this->opciones[$i]->graficar();
-            echo ' - ';
+            echo '-';
         }
     }
-    private function graficar_vertical(){
-        for($i=0;$i<count($this->opciones);$i++){
-            //Se invoca al metodo de objeto contenido en la posicion $i
+
+    private function graficarVertical() {
+        for( $i=0; $i<count($this->opciones); $i++ ) {
+            // SE INVOCA A MÉTODO DEL OBJETO CONTENIDO EN EL ARREGLO
             $this->opciones[$i]->graficar();
             echo '<br>';
         }
     }
 
-    public function graficar(){
-        if($this->direccion === 'horizontal'){
-            $this->graficar_horizontal();
-        }
-        else{
-            $this->graficar_vertical();
+    public function graficar() {
+        if( strtolower($this->direccion)=='horizontal' ) {
+            $this->graficarHorizontal();
+        } 
+        else {
+            $this->graficarVertical();
         }
     }
 }

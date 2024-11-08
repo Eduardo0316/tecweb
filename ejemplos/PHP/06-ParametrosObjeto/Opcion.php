@@ -1,19 +1,18 @@
 <?php
-class Opcion{
+class Opcion {
     private $titulo;
     private $enlace;
     private $colorFondo;
 
-    public function __construct($title,$link,$color){
+    public function __construct($title, $link, $bcolor) {
         $this->titulo = $title;
         $this->enlace = $link;
-        $this->colorFondo = $color;
+        $this->colorFondo = $bcolor;
     }
 
-    public function graficar(){
+    public function graficar() {
         $estilo = 'background-color: '.$this->colorFondo;
         echo '<a style="'.$estilo.'" href="'.$this->enlace.'">'.$this->titulo.'</a>';
     }
 }
-
 ?>

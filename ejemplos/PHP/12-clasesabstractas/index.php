@@ -10,27 +10,25 @@
     <?php
         require_once __DIR__ . '/Operacion.php';
         
+        // NADA CAMBIA CON RESPECTO AL EJEMPLO EN 08-herencia.
+        // SIN EMBARGO, CREAR UN OBJETO DE LA CLASE Operacion GENERARÁ ERROR.
         $suma1 = new Suma;
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         $suma1->cargar1(10);
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         $suma1->cargar2(10);
-        // SE USA MÉTODO DE LA SUBCALSE Suma
         $suma1->operar();
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         echo 'El resultado de 10+10 es: '.$suma1->getResultado();
         
         echo '<br>';
 
+        // NADA CAMBIA CON RESPECTO AL EJEMPLO EN 08-herencia.
+        // SIN EMBARGO, CREAR UN OBJETO DE LA CLASE Operacion GENERARÁ ERROR.
         $resta1 = new Resta;
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         $resta1->cargar1(10);
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         $resta1->cargar2(5);
-        // SE USA MÉTODO DE LA SUBCALSE Resta
         $resta1->operar();
-        // SE USA MÉTODO DE LA SUPERCLASE Operacion
         echo 'El resultado de 10-5 es: '.$resta1->getResultado();
+
+
     ?>
     
 </body>
