@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalogo>
+    <Cuenta>
+        <Correo>lalitolol720@gmail.com</Correo>
+        <Perfiles>
+            <Perfil>
+                <Usuario>Mendoza</Usuario>
+                <Idioma>Francés</Idioma>
+            </Perfil>
+            <Perfil>
+                <Usuario>Ale xd</Usuario>
+                <Idioma>Inglés</Idioma>
+            </Perfil>
+        </Perfiles>
+    </Cuenta>
+    <contenido>
+        <Peliculas>
+            <Genero>
+                <Nombre>Romance</Nombre>
+                <Titulo>
+                    <Nombre>La La Land</Nombre>
+                    <Duracion>2h 8m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>500 days of summer</Nombre>
+                    <Duracion>1h 35m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Me before you</Nombre>
+                    <Duracion>1h 50m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Amarte duele</Nombre>
+                    <Duracion>1h 44m</Duracion>
+                </Titulo>
+            </Genero>
+            <Genero>
+                <Nombre>Animación</Nombre>
+                <Titulo>
+                    <Nombre>The End of Evangelion</Nombre>
+                    <Duracion>1h 30m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Robot Dreams</Nombre>
+                    <Duracion>1h 42m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>La Familia Mitchell vs. Las Máquinas</Nombre>
+                    <Duracion>1h 54m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>El viaje de Chihiro</Nombre>
+                    <Duracion>2h 5m</Duracion>
+                </Titulo>
+            </Genero>
+        </Peliculas>
+        <Programas>
+            <Genero>
+                <Nombre>Noticias</Nombre>
+                <Titulo>
+                    <Nombre>Hechos</Nombre>
+                    <Duracion>3h</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Ventaneando</Nombre>
+                    <Duracion>2h</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>24 horas</Nombre>
+                    <Duracion>24h</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Tercer grado</Nombre>
+                    <Duracion>2h</Duracion>
+                </Titulo>
+            </Genero>
+            <Genero>
+                <Nombre>Entretenimiento</Nombre>
+                <Titulo>
+                    <Nombre>En familia con Chabelo</Nombre>
+                    <Duracion>3h</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Sabadazo</Nombre>
+                    <Duracion>3h</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>La voz México</Nombre>
+                    <Duracion>2h 30m</Duracion>
+                </Titulo>
+                <Titulo>
+                    <Nombre>Venga la alegría</Nombre>
+                    <Duracion>2h</Duracion>
+                </Titulo>
+            </Genero>
+        </Programas>
+    </contenido>
+</Catalogo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catalogo>
+    <Cuenta correo="lalitolol720@gmail.com">
+        <Perfiles>
+            <Perfil Usuario='Mendoza' Idioma='Francés'>
+            </Perfil>
+            <Perfil Usuario='Ale xd' Idioma='Inglés'>
+            </Perfil>
+        </Perfiles>
+    </Cuenta>
+    <Contenido>
+        <Peliculas>
+            <Genero Nombre='Romance'>
+                <Nombre>Romance</Nombre>
+                <Titulo Nombre='La La Land' Duracion='2h 8m'></Titulo>
+                <Titulo Nombre='500 days of summer' Duracion='1h 35m'></Titulo>
+                <Titulo Nombre='Me before you' Duracion='1h 50m'></Titulo>
+                <Titulo Nombre='Amarte duele' Duracion='1h 44m'></Titulo>
+            </Genero>
+            <Genero Nombre='Animación'>
+                <Titulo Nombre='The End of Evangelion' Duracion='1h 30m'></Titulo>
+                <Titulo Nombre='Robot Dreams' Duracion='1h 42m'></Titulo>
+                <Titulo Nombre='La Familia Mitchell vs. Las Máquinas' Duracion='1h 54m'></Titulo>
+                <Titulo Nombre='El viaje de Chihiro' Duracion='2h 5m'></Titulo>
+            </Genero>
+        </Peliculas>
+        <Programas>
+            <Genero Nombre='Entretenimiento'>
+                <Titulo Nombre='En familia con Chabelo' Duracion='3h'></Titulo>
+                <Titulo Nombre='Sabadazo' Duracion='3h'></Titulo>
+                <Titulo Nombre='La voz México' Duracion='2h 30m'></Titulo>
+                <Titulo Nombre='Venga la alegría' Duracion='2h'></Titulo>
+            </Genero>
+            <Genero Nombre='Noticias'>
+                <Titulo Nombre='Hechos' Duracion='3h'></Titulo>
+                <Titulo Nombre='Ventaneando' Duracion='3h'></Titulo>
+                <Titulo Nombre='24 horas' Duracion='24h'></Titulo>
+                <Titulo Nombre='Tercer grado' Duracion='2h'></Titulo>
+            </Genero>
+        </Programas>
+    </Contenido>
+</Catalogo>

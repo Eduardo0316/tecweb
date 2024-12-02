@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cinefanatico SYSTEM "cinefanatico.dtd">
+<cinefanatico>
+    <tarjeta noserie="202117" visitas="02" puntos="50">
+        <nombre>Fernanda Martínez</nombre>
+        <correo>fer2508@gmail.com</correo>
+        <telefono tipo="movil">2223334455</telefono>
+        <telefono tipo="casa">4427335566</telefono>
+    </tarjeta>
+</cinefanatico>

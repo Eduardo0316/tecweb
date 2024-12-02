@@ -1,0 +1,23 @@
+<!ELEMENT Catalogo (Cuenta+,Contenido+)>
+<!ELEMENT Cuenta (Perfiles)>
+<!ELEMENT Contenido (Peliculas, Programas)>
+<!ELEMENT Perfiles (Perfil+)>
+<!ELEMENT Perfil (#PCDATA)>
+<!ELEMENT Peliculas (Genero+)>
+<!ELEMENT Programas (Genero+)>
+<!ELEMENT Genero (Titulo*)>
+<!ELEMENT Titulo (#PCDATA)>
+<!ATTLIST Cuenta
+Correo CDATA #REQUIRED
+>
+<!ATTLIST Perfil
+Usuario CDATA #REQUIRED
+Idioma CDATA #REQUIRED
+>
+<!ATTLIST Genero
+Nombre CDATA #REQUIRED
+>
+<!ATTLIST Titulo
+Nombre CDATA #REQUIRED
+Duracion CDATA #REQUIRED
+>
